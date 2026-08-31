@@ -18,7 +18,7 @@
 | nginx | `/www/server/panel/vhost/nginx/shop.ywye.top.conf` | 安全头/gzip/auth_basic/www 301/反代（本地副本：`nginx-cms.conf`） |
 | SSL | `/etc/tencent-ssl/shop.ywye.top/{fullchain,privkey}.pem` | 域名证书，不绑定 IP；**私钥不随包传输** |
 | 进程 | `python3 cms_server.py` :8081 | **已配置 systemd 自启**（cms_server.service） |
-| 外部 | 域名 DNS → 43.156.13.57；腾讯云 CDN 回源 | 迁移后需切换 |
+| 外部 | 域名 DNS → YOUR_SERVER_IP；腾讯云 CDN 回源 | 迁移后需切换 |
 
 ---
 

@@ -5,8 +5,8 @@
 # ==================================================
 set -euo pipefail
 
-KEY="D:/Documents/xwechat_files/wxid_hotrnprahqp22_de86/msg/file/2026-08/dianshang.pem"
-HOST="root@43.156.13.57"
+KEY="~/.ssh/your-key.pem"
+HOST="root@YOUR_SERVER_IP"
 BASE="/www/server/nginx/html/article"
 
 echo "🚀 星棠官网部署"

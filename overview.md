@@ -1,6 +1,6 @@
 # 星棠官网 SEO/GEO 整改 + 安全审计修复 — 交付说明
 
-**日期**：2026-08-18　**站点**：https://shop.ywye.top/　（源站 43.156.13.57，nginx + Python CMS 8081）
+**日期**：2026-08-18　**站点**：https://shop.ywye.top/　（源站 YOUR_SERVER_IP，nginx + Python CMS 8081）
 
 ## 一、安全审计（6 项，全部修复并线上验证）
 
