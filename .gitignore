@@ -1,0 +1,17 @@
+# 迁移包（含数据库+凭据，严禁入库）
+xingtang_migrate_*.tar.gz
+# 凭据临时文件
+.cred_tmp
+*.pem
+# 工作目录与缓存
+.workbuddy/
+__pycache__/
+_analysis/
+# 临时/旧文件
+index_live.html
+maogp.html
+api_public.json
+local_pub.json
+diff-analysis.md
+sitemap_for_xt.xml
+-

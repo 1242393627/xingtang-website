@@ -1,0 +1,14 @@
+[Unit]
+Description=XingTang CMS (Python http.server :8081)
+After=network.target mariadb.service mysql.service
+Wants=mariadb.service
+
+[Service]
+Type=simple
+WorkingDirectory=/www/server/nginx/html/article
+ExecStart=/usr/bin/python3 /www/server/nginx/html/article/cms_server.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

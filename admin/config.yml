@@ -1,0 +1,86 @@
+backend:
+  name: proxy
+  proxy_url: /api/v1
+  branch: main
+
+local_backend: true
+
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+collections:
+  - name: "settings"
+    label: "站点设置"
+    extension: "json"
+    format: "json"
+    create: false
+    delete: false
+    files:
+      - file: "content/settings/site.json"
+        name: "site"
+        label: "全局设置"
+        fields:
+          - { name: "school_name", label: "学校名称", widget: "string", default: "星棠化妆培训学校" }
+          - { name: "phone", label: "服务热线", widget: "string", default: "158 2526 3079" }
+          - { name: "wechat", label: "微信号", widget: "string", default: "15825263079" }
+          - { name: "slogan", label: "Slogan", widget: "string", default: "以技术为根 · 以审美为魂" }
+          - { name: "create_year", label: "创始年份", widget: "number", default: 2018 }
+          - { name: "teacher_count", label: "师资人数", widget: "number", default: 200 }
+          - { name: "campus_count", label: "校区数", widget: "number", default: 13 }
+          - { name: "employment_rate", label: "就业率", widget: "number", default: 95 }
+          - { name: "course_count", label: "课程数", widget: "number", default: 10 }
+
+  - name: "courses"
+    label: "课程管理"
+    folder: "content/courses"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "title", label: "课程名称", widget: "string" }
+      - { name: "icon", label: "图标字", widget: "string", default: "课" }
+      - { name: "description", label: "课程简介", widget: "text" }
+      - { name: "detail", label: "详细描述", widget: "markdown" }
+      - { name: "image", label: "课程图片", widget: "image", required: false }
+      - { name: "order", label: "排序", widget: "number", default: 1 }
+
+  - name: "news"
+    label: "新闻资讯"
+    folder: "content/news"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "title", label: "标题", widget: "string" }
+      - { name: "date", label: "日期", widget: "date" }
+      - { name: "category", label: "分类", widget: "select", options: ["招生","就业","活动","师资","课程","合作"] }
+      - { name: "summary", label: "摘要", widget: "text" }
+      - { name: "body", label: "正文", widget: "markdown", required: false }
+      - { name: "image", label: "配图", widget: "image", required: false }
+
+  - name: "banners"
+    label: "首页轮播"
+    folder: "content/banners"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "title_en", label: "英文标题", widget: "string" }
+      - { name: "title_cn", label: "中文标题", widget: "string" }
+      - { name: "subtitle", label: "副标题", widget: "string" }
+      - { name: "link_text", label: "按钮文字", widget: "string", default: "了解更多" }
+      - { name: "link_url", label: "按钮链接", widget: "string", default: "#recruit" }
+      - { name: "image", label: "背景图", widget: "image" }
+      - { name: "order", label: "排序", widget: "number", default: 1 }
+
+  - name: "cities"
+    label: "城市校区"
+    folder: "content/cities"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "name", label: "城市名", widget: "string" }
+      - { name: "name_en", label: "英文名", widget: "string" }
+      - { name: "image", label: "城市图", widget: "image" }
+      - { name: "order", label: "排序", widget: "number", default: 1 }
